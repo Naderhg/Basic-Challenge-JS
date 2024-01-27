@@ -1,0 +1,77 @@
+/* Challenge 1 */
+
+let a = 10;
+let b = "20";
+let c = 80;
+
+console.log(++a + +b++ + +c++ - +a++)
+/*
+[++a] [+] [+b++] [+] [+c++] [-] [+a++]
+[++a]
+    Value: 11
+    Explain: Pre Increment
+ALL [+]
+    Explain: Addition
+[+b++]
+    value: 20
+    Explain: Post Increment
+[+c++]
+    value: 80
+    Explain: Post Increment
+[-]
+    Explain: Subtraction
+[+a++]
+    value: 11
+    Explain: Post Increment
+*/
+
+
+console.log(++a + -b + +c++ - -a++ + +a);
+/*
+[++a] [+] [-b] [+] [+c++] [-] [-a++] [+] [+a]
+[++a]
+    Value: 11
+    Explain: Pre Increment
+ALL [+]
+    Explain: Addition
+[-b]
+    value: -20
+[+c++]
+    value: 80
+    Explain: Post Increment
+[-]
+    Explain: Subtraction
+[-a++]
+    value: 11
+    Explain: Post Increment
+[+]
+    Value: 12
+*/
+
+
+console.log(--c + +b + --a * +b++ - +b * a + --a - +true);
+/*
+[--c] [+] [+b] [+] [--a] [*] [+b++] [-] [+b] [*] [a] [+] [--a] [-] [+true]
+[--c]
+    Value: 79
+    Explain: Pre Decrement
+ALL [+]
+    Explain: Addition
+[+b]
+    value: 20
+[--a]
+Value: 9
+    Explain: Pre Decrement
+[+b++]
+    value: 20
+    Explain: Post Increment
+[+b]
+    Value: 21
+[a]
+    Value: 9
+[--a]
+    Value: 8
+    Explain: Pre Decrement
+[+true]
+    Value: 1
+*/
